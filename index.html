@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastFligran - Fligran Ekleme Uygulaması</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🖼️ FastFligran</h1>
+            <p>Görsellerinize kolayca fligran ekleyin</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="quick-mode-toggle">
+                    <label class="toggle-container">
+                        <input type="checkbox" id="quickModeToggle">
+                        <span class="toggle-slider"></span>
+                        <span class="toggle-label">⚡ Hızlı Çıktı Modu</span>
+                    </label>
+                    <p class="toggle-description">Açıkken: Görsel seç → Otomatik fligran ekle → Masaüstüne kaydet</p>
+                </div>
+                
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <div class="upload-icon">📁</div>
+                        <h3>Görsel Seçin</h3>
+                        <p>Fligran eklemek istediğiniz görseli seçin</p>
+                        <button id="selectImageBtn" class="btn btn-primary">Görsel Seç</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="editor-section" id="editorSection" style="display: none;">
+                <div class="preview-area">
+                    <canvas id="canvas"></canvas>
+                </div>
+                
+                <div class="controls-compact">
+                    <div class="control-row">
+                        <button id="newImageBtn" class="btn btn-outline">📁 Yeni Görsel</button>
+                    </div>
+
+                    <div class="control-row">
+                        <label>Renk:</label>
+                        <div class="color-palette-compact">
+                            <div class="color-option" data-color="#000000" style="background-color: #000000;" title="Siyah"></div>
+                            <div class="color-option active" data-color="#ffffff" style="background-color: #ffffff; border: 2px solid #ddd;" title="Beyaz"></div>
+                            <div class="color-option" data-color="#ff0000" style="background-color: #ff0000;" title="Kırmızı"></div>
+                            <div class="color-option" data-color="#00ff00" style="background-color: #00ff00;" title="Yeşil"></div>
+                            <div class="color-option" data-color="#0000ff" style="background-color: #0000ff;" title="Mavi"></div>
+                            <div class="color-option" data-color="#ffff00" style="background-color: #ffff00;" title="Sarı"></div>
+                            <div class="color-option" data-color="#ff00ff" style="background-color: #ff00ff;" title="Mor"></div>
+                            <div class="color-option" data-color="#00ffff" style="background-color: #00ffff;" title="Cyan"></div>
+                            <div class="color-option" data-color="#ffa500" style="background-color: #ffa500;" title="Turuncu"></div>
+                            <div class="color-option" data-color="#800080" style="background-color: #800080;" title="Menekşe"></div>
+                            <div class="color-option custom-color" title="Özel Renk">
+                                <input type="color" id="customColorPicker" value="#ffffff">
+                                <span>🎨</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-row">
+                        <label for="opacitySlider">Şeffaflık:</label>
+                        <input type="range" id="opacitySlider" min="0.1" max="1" step="0.01" value="0.5">
+                        <span id="opacityValue">50%</span>
+                    </div>
+
+                    <div class="control-row">
+                        <label for="sizeSlider">Boyut:</label>
+                        <input type="range" id="sizeSlider" min="0.1" max="2" step="0.01" value="0.6">
+                        <span id="sizeValue">60%</span>
+                    </div>
+
+                    <div class="control-row">
+                        <label for="positionSlider">Pozisyon:</label>
+                        <input type="range" id="positionSlider" min="0.02" max="0.3" step="0.01" value="0.04">
+                        <span id="positionValue">4%</span>
+                    </div>
+
+                    <div class="control-row buttons">
+                        <button id="resetBtn" class="btn btn-secondary">Sıfırla</button>
+                        <button id="downloadBtn" class="btn btn-success">İndir</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>FastFligran v1.0 - Basit ve Pratik Fligran Ekleme</p>
+        </footer>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
