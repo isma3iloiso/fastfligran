@@ -16,11 +16,7 @@ FastFligran, görsellerinize kolayca fligran ekleyebileceğiniz **basit ve prati
 
 ## 📸 Ekran Görüntüleri
 
-### Ana Arayüz
-![Ana Arayüz](https://via.placeholder.com/800x600/667eea/ffffff?text=FastFligran+Ana+Arayuz)
-
-### Hızlı Çıktı Modu
-![Hızlı Çıktı Modu](https://via.placeholder.com/800x600/28a745/ffffff?text=Hizli+Cikti+Modu)
+> **Not**: Ekran görüntüleri yakında eklenecektir. Uygulamayı indirip test edebilirsiniz!
 
 ## 🎯 İki Kullanım Modu
 
